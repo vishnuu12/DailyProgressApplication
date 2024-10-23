@@ -1,0 +1,114 @@
+.form-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f3f4f6; /* Light background */
+  }
+  
+  ion-card {
+    margin-bottom: 16px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  ion-card-title {
+    color: #3880ff; /* Primary color for title */
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  
+  ion-item {
+    --background: transparent;
+  }
+  
+  ion-label {
+    font-weight: bold;
+    color: #444;
+  }
+  
+  ion-input,
+  ion-textarea {
+    margin-top: 8px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 1rem;
+  }
+  
+  ion-button {
+    margin-top: 16px;
+    font-size: 1rem;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between; /* Equal spacing between buttons */
+    padding: 16px; /* Optional padding */
+  }
+  
+  .button-container ion-button {
+    flex: 1; /* Makes each button take equal space */
+    margin-right: 8px; /* Optional spacing between buttons */
+  }
+  
+  .button-container ion-button:last-child {
+    margin-right: 0; /* No margin for the last button */
+  }
+  
+  .section {
+    padding: 16px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .section-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .result-title {
+    font-size: 1.5em;
+    margin: 16px 0;
+  }
+  
+  .result-display {
+    padding: 16px;
+  }
+
+  .medium-primary-text-style {
+    font-size: 13px;
+    font-weight: 500;
+    margin: 5px;
+}
+
+.header-flex-style {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 4px;
+}
+
+
+/* General Header Styles */
+.responsive-header {
+    --background: #4a90e2; /* Primary color for the header */
+    --color: #ffffff; /* White text for contrast */
+    --padding-start: 12px;
+    --padding-end: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Responsive Title Styles */
+  .responsive-title {
+    font-size: 15px; /* Default font size */
+    font-weight: bold;
+    color: #ffffff; /* White color for title */
+  }
+  

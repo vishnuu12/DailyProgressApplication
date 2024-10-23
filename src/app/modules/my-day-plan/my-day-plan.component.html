@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar class="responsive-header">
+
+    <!-- Centered Title -->
+    <ion-title class="responsive-title">Today's Plan</ion-title>
+
+    <!-- Optional Menu or Action Button -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="form-background">
+  <form [formGroup]="dailyPlanForm" (ngSubmit)="submitForm()" *ngIf="!isFormSubmitted">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Your Plans</ion-label>
+      </ion-item>
+
+      <div formArrayName="plans">
+        <div *ngFor="let plan of plans.controls; let i = index">
+          <ion-item [formGroupName]="i">
+            <ion-textarea
+              formControlName="plan"
+              placeholder="Enter your plan here..."
+            ></ion-textarea>
+            <ion-button color="danger" (click)="removePlan(i)">
+              Remove
+            </ion-button>
+          </ion-item>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <!-- Add Button -->
+        <ion-button expand="full" (click)="addPlan()">
+          Add Plan
+        </ion-button>
+        <!-- Submit Button -->
+        <ion-button expand="block" type="submit" color="tertiary">
+          Submit
+        </ion-button>
+      </div>
+    </ion-list>
+  </form>
+
+  <!-- Display JSON Result -->
+  <div *ngIf="isFormSubmitted" class="result-display">
+    <div class="date-header">
+      Today's Plan ({{ currentDate | date: 'dd-MMMM-yyyy' }})
+    </div>
+    <div class="plan-list">
+      <div *ngFor="let plan of submittedData.plans">
+        ✨ {{ plan }}
+      </div>
+    </div>
+    <div class="button-container">
+      <ion-button expand="full" color="primary" (click)="backToForm()">
+        Back
+      </ion-button>
+      <ion-button expand="full" color="primary" (click)="copyToClipboard()">
+        Copy
+      </ion-button>
+      <ion-button expand="full" color="secondary" (click)="editToForm()">
+        Edit
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

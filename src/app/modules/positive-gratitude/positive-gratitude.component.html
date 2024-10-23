@@ -1,0 +1,152 @@
+<ion-header>
+  <ion-toolbar class="responsive-header">
+
+    <!-- Centered Title -->
+    <ion-title class="responsive-title">Positives & Gratitudes</ion-title>
+
+    <!-- Optional Menu or Action Button -->
+  </ion-toolbar>
+</ion-header>
+
+
+
+<!-- <ion-card-header class="medium-primary-text-style header-flex-style" color="primary">
+  <div style="padding-bottom: 2px; margin-left: 4px;">
+    <ion-label class="medium-primary-text-style header-flex-style"> <b>Today's Positives & Gratitudes</b> </ion-label>
+    <div class="line-2"></div>
+  </div>
+</ion-card-header> -->
+
+<ion-content class="form-background">
+  <!-- Form Section - Show only if form is not submitted -->
+  <form *ngIf="!isFormSubmitted" [formGroup]="gratitudeForm" (ngSubmit)="submitForm()">
+
+    <!-- Positive Section -->
+    <div class="section">
+      <ion-label class="section-title">Positive</ion-label>
+      
+      <div formArrayName="healthyFood">
+        <div *ngFor="let food of healthyFood.controls; let i = index" [formGroupName]="i">
+          <ion-item>
+            <ion-label position="stacked">Healthy Food</ion-label>
+            <ion-input formControlName="item" placeholder="Enter healthy food item"></ion-input>
+            <ion-button fill="clear" color="danger" (click)="removeHealthyFood(i)">
+              <ion-icon name="trash"></ion-icon>
+            </ion-button>
+          </ion-item>
+        </div>
+        <ion-button fill="clear" (click)="addHealthyFood()">Add Food</ion-button>
+      </div>
+
+      <div formArrayName="socialActivities">
+        <div *ngFor="let activity of socialActivities.controls; let j = index" [formGroupName]="j">
+          <ion-item>
+            <ion-label position="stacked">Social Activities</ion-label>
+            <ion-input formControlName="item" placeholder="Enter social activity"></ion-input>
+            <ion-button fill="clear" color="danger" (click)="removeSocialActivity(j)">
+              <ion-icon name="trash"></ion-icon>
+            </ion-button>
+          </ion-item>
+        </div>
+        <ion-button fill="clear" (click)="addSocialActivity()">Add Activity</ion-button>
+      </div>
+    </div>
+
+    <!-- Gratitude Section -->
+    <div class="section">
+      <ion-label class="section-title">Gratitude</ion-label>
+      
+      <div formArrayName="familyGratitude">
+        <div *ngFor="let family of familyGratitude.controls; let k = index" [formGroupName]="k">
+          <ion-item>
+            <ion-label position="stacked">Family</ion-label>
+            <ion-textarea formControlName="item" placeholder="Enter your gratitude for family"></ion-textarea>
+            <ion-button fill="clear" color="danger" (click)="removeFamilyGratitude(k)">
+              <ion-icon name="trash"></ion-icon>
+            </ion-button>
+          </ion-item>
+        </div>
+        <ion-button fill="clear" (click)="addFamilyGratitude()">Add Family Gratitude</ion-button>
+      </div>
+
+      <div formArrayName="friendsGratitude">
+        <div *ngFor="let friend of friendsGratitude.controls; let l = index" [formGroupName]="l">
+          <ion-item>
+            <ion-label position="stacked">Friends or Others</ion-label>
+            <ion-textarea formControlName="item" placeholder="Enter your gratitude for friends or others"></ion-textarea>
+            <ion-button fill="clear" color="danger" (click)="removeFriendsGratitude(l)">
+              <ion-icon name="trash"></ion-icon>
+            </ion-button>
+          </ion-item>
+        </div>
+        <ion-button fill="clear" (click)="addFriendsGratitude()">Add Friend/Other Gratitude</ion-button>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <ion-button expand="block" type="submit" color="tertiary">
+      Submit
+    </ion-button>
+  </form>
+
+  <!-- Display Result in Design Format - Show only if form is submitted -->
+  <div *ngIf="isFormSubmitted" class="result-display">
+    <ion-label class="result-title">💥❄️ Positive❄️💥</ion-label>
+    
+    <!-- Healthy Food Section -->
+    <div *ngIf="submittedData.healthyFood.length > 0">
+      <ion-label class="section-title">✨ Healthy Food:</ion-label>
+      <ul>
+        <li *ngFor="let food of submittedData.healthyFood">
+          ▫️ {{ food.item }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- Social Activities Section -->
+    <div *ngIf="submittedData.socialActivities.length > 0">
+      <ion-label class="section-title">✨ Social Activities:</ion-label>
+      <ul>
+        <li *ngFor="let activity of submittedData.socialActivities">
+          ▫️ {{ activity.item }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- Gratitude Section -->
+    <ion-label class="result-title">💥🙏🏻 Gratitude🙏🏻💥</ion-label>
+
+    <!-- Family Gratitude Section -->
+    <div *ngIf="submittedData.familyGratitude.length > 0">
+      <ion-label class="section-title">✨ Family:</ion-label>
+      <ul>
+        <li *ngFor="let family of submittedData.familyGratitude">
+          ▫️ {{ family.item }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- Friends Gratitude Section -->
+    <div *ngIf="submittedData.friendsGratitude.length > 0">
+      <ion-label class="section-title">✨ Friends or Others:</ion-label>
+      <ul>
+        <li *ngFor="let friend of submittedData.friendsGratitude">
+          ▫️ {{ friend.item }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- Copy Button to Copy JSON -->
+    <div class="button-container">
+      <ion-button expand="full" color="primary" (click)="backToForm()">
+        Back
+      </ion-button>
+      <ion-button expand="full" color="primary" (click)="copyToClipboard()">
+        Copy
+      </ion-button>
+      <ion-button expand="full" color="secondary" (click)="editToForm()">
+        Edit
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,72 @@
+.login-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Full viewport height */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 75%;
+}
+
+.login-header {
+  margin-bottom: 20px;
+}
+
+.login-title {
+  font-size: 2rem;
+  color: #3880ff;
+  /* Primary color */
+}
+
+.login-form {
+  width: 100%;
+}
+
+.custom-input {
+  --padding-start: 15px;
+}
+
+.login-button {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+
+/* Custom input styling */
+.custom-input {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for inputs */
+.custom-input:hover {
+  border: 1px solid #c5c5c5;
+}
+
+/* Focus effect for inputs */
+.custom-input:focus {
+  border: 1px solid #00f2fe;
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.5);
+  outline: none;
+}
+
+/* Input field item styling */
+.input-item {
+  margin-bottom: 10px;
+}
+
+.top-content-alignment-style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vh !important;
+}

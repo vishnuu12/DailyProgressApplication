@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Member List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="welcome-background">
+  <div class="welcome-container">
+
+    <!-- Responsive Members Table -->
+    <ion-grid class="members-grid">
+      <!-- Table Header -->
+      <ion-row class="table-header">
+        <ion-col size="4" size-sm="3">Name</ion-col>
+        <ion-col size="5" size-sm="5">Email</ion-col>
+        <ion-col size="3" size-sm="2" class="status-header">Status</ion-col>
+      </ion-row>
+
+      <!-- Table Body -->
+      <ion-row *ngFor="let member of members" class="table-row">
+        <ion-col size="4" size-sm="3" class="member-name">{{ member.name }}</ion-col>
+        <ion-col size="5" size-sm="5" class="member-email">{{ member.email }}</ion-col>
+        <ion-col size="3" size-sm="2" class="member-status">
+          <ion-badge [color]="member.status === 'Active' ? 'success' : 'medium'">
+            {{ member.status }}
+          </ion-badge>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

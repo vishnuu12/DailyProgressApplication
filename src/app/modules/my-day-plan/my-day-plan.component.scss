@@ -1,0 +1,79 @@
+.form-background {
+    background-color: #f9f9f9; // Change to your desired background color
+    padding: 16px;
+  }
+  
+  ion-button {
+    margin-top: 16px;
+    font-size: 1rem;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between; /* Equal spacing between buttons */
+    padding: 16px; /* Optional padding */
+  }
+  
+  .button-container ion-button {
+    flex: 1; /* Makes each button take equal space */
+    margin-right: 8px; /* Optional spacing between buttons */
+  }
+  
+  .button-container ion-button:last-child {
+    margin-right: 0; /* No margin for the last button */
+  }
+  
+  ion-item {
+    margin: 8px 0; // Spacing between items
+  }
+  
+  pre {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow-x: auto; // Allows horizontal scrolling for long JSON
+  }
+    
+  .result-display {
+    padding: 16px;
+    background-color: #fff; // White background for contrast
+    margin-top: 16px;
+    border-radius: 8px; // Rounded corners
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Slight shadow for depth
+  }
+  
+  .date-header {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .plan-list {
+    margin-top: 8px;
+  }
+  
+  .plan-list div {
+    margin: 4px 0; // Spacing between plans
+  }
+  
+/* General Header Styles */
+.responsive-header {
+    --background: #4a90e2; /* Primary color for the header */
+    --color: #ffffff; /* White text for contrast */
+    --padding-start: 12px;
+    --padding-end: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Responsive Title Styles */
+  .responsive-title {
+    font-size: 15px; /* Default font size */
+    font-weight: bold;
+    color: #ffffff; /* White color for title */
+  }
+  

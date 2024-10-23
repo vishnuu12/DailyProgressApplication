@@ -1,0 +1,34 @@
+<ion-header></ion-header>
+<ion-content class="login-background">
+
+  <div class="login-container">
+    <!-- Title Section -->
+    <div class="top-content-alignment-style">
+      <h2 class="login-title">Login</h2>
+    </div>
+
+    <!-- Form Section -->
+    <div class="top-content-alignment-style">
+      <form [formGroup]="loginForm" class="login-form">
+        <!-- Username Input -->
+        <ion-item lines="none" class="input-item">
+          <ion-input type="text" required class="custom-input" formControlName="username"
+            placeholder="Username"></ion-input>
+        </ion-item>
+
+        <!-- Password Input -->
+        <ion-item lines="none" class="input-item">
+          <ion-input type="password" required class="custom-input" formControlName="password"
+            placeholder="Password"></ion-input>
+        </ion-item>
+
+        <!-- Login Button -->
+        <ion-button expand="block" (click)="btnLogin()" class="login-button">
+          Login
+        </ion-button>
+      </form>
+    </div>
+  </div>
+
+</ion-content>
+<ion-footer></ion-footer>

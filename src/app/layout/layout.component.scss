@@ -1,0 +1,78 @@
+/* General Menu Styles */
+ion-menu {
+    --background: #f8f9fa; /* Light background color for the menu */
+    width: 80%; /* Adjust width for mobile view */
+    max-width: 300px; /* Limit max width */
+  }
+  
+  /* Toolbar Styles */
+  ion-toolbar {
+    // --background: #3b5998; /* Custom background color */
+    color: #3b5998; /* White text for contrast */
+  }
+  
+  /* Accordion Group */
+  ion-accordion-group {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* List and Item Styles */
+  ion-list {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ion-item {
+    --background: transparent;
+    --padding-start: 12px;
+    font-size: 1rem;
+    margin: 4px 0; /* Even spacing between items */
+    border-radius: 8px; /* Slightly rounded corners */
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  ion-item:hover {
+    background-color: #e1e8ed; /* Hover effect */
+  }
+  
+  /* Label and Text Styles */
+  ion-label {
+    font-size: 1rem;
+    color: #333333; /* Dark color for better readability */
+  }
+  
+  .small-primary-text-style {
+    color: #1e73be; /* Custom color for menu text */
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  
+  /* Icon Styles */
+  ion-icon {
+    font-size: 1.4rem;
+    color: #3b5998; /* Use the same color as the toolbar for consistency */
+  }
+  
+  /* Logout Button Styles */
+  ion-button {
+    --background: transparent;
+    --color: #ffffff; /* White icon for the logout button */
+  }
+  
+  ion-button:hover {
+    --background: rgba(255, 255, 255, 0.1); /* Hover effect for the logout button */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    ion-menu {
+      width: 100%;
+      max-width: none; /* Remove max-width for smaller screens */
+    }
+  
+    .small-primary-text-style {
+      font-size: 1rem;
+    }
+  }
+  

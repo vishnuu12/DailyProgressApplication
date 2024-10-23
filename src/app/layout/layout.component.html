@@ -1,0 +1,74 @@
+<ion-app>
+  <ion-menu contentId="content">
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <!-- <ion-title>Menu Content</ion-title> -->
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <!-- Accordion Group Menus -->
+      <ion-accordion-group style="margin: 0px;" expand="inset">
+        <div>
+          <div class="ion-no-padding" slot="content">
+            <ion-list lines="none">
+              <ion-menu-toggle auto-hide="false">
+                <!-- <ion-item detail="false">
+                  <ion-label>
+                    <ion-text style="padding-left: 8px;" (click)="goToModulePage('layout/members')" class="small-primary-text-style ion-padding-start">
+                      <span><b>Member List</b></span>
+                    </ion-text>
+                  </ion-label>
+                </ion-item> -->
+                <ion-item detail="false">
+                  <ion-label>
+                    <ion-text style="padding-left: 8px;" (click)="goToModulePage('layout/home')" class="small-primary-text-style ion-padding-start">
+                      <span><b>Dashborad</b></span>
+                    </ion-text>
+                  </ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label>
+                    <ion-text style="padding-left: 8px;" (click)="goToModulePage('layout/positive-gratitude')" class="small-primary-text-style ion-padding-start">
+                      <span><b>Positive & Gratitude</b></span>
+                    </ion-text>
+                  </ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label>
+                    <ion-text style="padding-left: 8px;" (click)="goToModulePage('layout/my-day-plan')" class="small-primary-text-style ion-padding-start">
+                      <span><b>My Day Plan</b></span>
+                    </ion-text>
+                  </ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+            </ion-list>
+          </div>
+        </div>
+      </ion-accordion-group>
+    </ion-content>
+  </ion-menu>
+
+  <!-- Main Content -->
+  <ion-router-outlet id="content" main></ion-router-outlet>
+
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <!-- <ion-title>Menu</ion-title> -->
+        <!-- Logout Button on the Right Side -->
+        <ion-buttons slot="end">
+          <ion-button (click)="logout()">
+            <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-router-outlet></ion-router-outlet>
+    </ion-content>
+  </div>
+</ion-app>
