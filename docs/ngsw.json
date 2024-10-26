@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1729936612760,
+  "timestamp": 1729939184000,
   "index": "/DailyProgressApplication/index.html",
   "assetGroups": [
     {
@@ -74,7 +74,7 @@
         "/DailyProgressApplication/common.7a0c8a027fb9ca40.js",
         "/DailyProgressApplication/favicon.ico",
         "/DailyProgressApplication/index.html",
-        "/DailyProgressApplication/main.e4553d8ded2b7da0.js",
+        "/DailyProgressApplication/main.4100960333a801b2.js",
         "/DailyProgressApplication/manifest.webmanifest",
         "/DailyProgressApplication/polyfills-core-js.910e4de39469e90c.js",
         "/DailyProgressApplication/polyfills-dom.53531067d86dd607.js",
@@ -176,8 +176,8 @@
     "/DailyProgressApplication/assets/icons/phoenix-blue-96x96.png": "742910265490653a0b5a89e5f23f14a528c6c25b",
     "/DailyProgressApplication/common.7a0c8a027fb9ca40.js": "29277a50f551fd8cd6a799934c7fce88708bc3f0",
     "/DailyProgressApplication/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/DailyProgressApplication/index.html": "ef4e756af806d2822cbf8cfc743400b6b4203e24",
-    "/DailyProgressApplication/main.e4553d8ded2b7da0.js": "72577a85400c4ab6869d1afa091106ec5bf461e9",
+    "/DailyProgressApplication/index.html": "c4c846dc399b4cbe4a3fe7ab88e6802010611d4a",
+    "/DailyProgressApplication/main.4100960333a801b2.js": "09209d59bf8ec75bb443fe00b28baf4092162de8",
     "/DailyProgressApplication/manifest.webmanifest": "5e3358eac4aadb6bfd7e745c076f776ba028ea53",
     "/DailyProgressApplication/polyfills-core-js.910e4de39469e90c.js": "e3bf7f847389e257274ca6beabf92527b7dc3265",
     "/DailyProgressApplication/polyfills-dom.53531067d86dd607.js": "5d2dd69d44f3ab8ccb0c7bfc1efd197f08cbe2d9",
