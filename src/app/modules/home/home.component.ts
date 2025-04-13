@@ -15,5 +15,9 @@ export class HomeComponent {
   navigateToFeatures() {
     this.router.navigate(['']); // Navigate to another page or features screen
   }
+  async goToModulePage(item: string) {
+    console.log("route path",item);
+    await this.router.navigateByUrl(item);
+  }
 
 }

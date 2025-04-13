@@ -13,7 +13,8 @@ const routes: Routes = [
           },
           { path: 'members', loadChildren: () => import('./../modules/members/members.module').then(m => m.MembersModule) },
           { path: 'positive-gratitude', loadChildren: () => import('./../modules/positive-gratitude/positive-gratitude.module').then(m => m.PositiveGratitudeModule) },
-          { path: 'my-day-plan', loadChildren: () => import('./../modules/my-day-plan/my-day-plan.module').then(m => m.MyDayPlanModule) },
+          { path: 'my-day-plan1', loadChildren: () => import('./../modules/my-day-plan/my-day-plan.module').then(m => m.MyDayPlanModule) },
+          { path: 'my-day-plan', loadChildren: () => import('./../modules/speech-recognition/speech-recognition.module').then(m => m.SpeechRecognitionModule) },
         ]
         //   loadChildren: () => import('../modules/module.module').then(m => m.ModuleModule)
     },

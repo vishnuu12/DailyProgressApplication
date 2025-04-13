@@ -5,12 +5,13 @@ import { IonicModule } from '@ionic/angular';
 import { PositiveGratitudeModule } from './positive-gratitude/positive-gratitude.module';
 import { PositiveGratitudeRoutingModule } from './positive-gratitude/positive-gratitude-routing.module';
 import { MyDayPlanRoutingModule } from './my-day-plan/my-day-play-routing.module';
+import { SpeechRecognitionModule } from './speech-recognition/speech-recognition.module';
 
 
 
 @NgModule({
   imports: [
-    ModuleRoutingModule,PositiveGratitudeRoutingModule,MyDayPlanRoutingModule,
+    ModuleRoutingModule,PositiveGratitudeRoutingModule,MyDayPlanRoutingModule,SpeechRecognitionModule,
     IonicModule
   ],
 

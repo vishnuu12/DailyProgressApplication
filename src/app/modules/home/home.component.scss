@@ -2,6 +2,22 @@
     font-size: small;
 }
 
+/* Add this CSS to your global styles or in a component-specific stylesheet */
+/* Button styling */
+.custom-button {
+    --width: 60px;
+    --height: 60px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Initial shadow */
+    animation: voice-frequency 1.5s ease-in-out infinite; /* Apply the voice-frequency animation */
+}
+
+/* Custom icon size */
+.custom-icon {
+    font-size: 40px; /* Adjust this size as needed */
+}
+
+  
 .welcome-background {
     background-color: #f0f8ff;
     /* Light background color */
